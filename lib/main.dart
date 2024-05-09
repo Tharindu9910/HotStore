@@ -17,8 +17,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ECommerce APP',
       theme: ThemeData(
+        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
         colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.red.shade900, background: Colors.grey.shade200),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.red,
+            foregroundColor: Colors.white,
+          ),
+        ),
         useMaterial3: true,
       ),
       home: const BottomNavScreen(),

@@ -74,7 +74,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                 ),
                               ),
                               Text(
-                                "Fashion \nsale",
+                                "Fashion\nsale",
                                 style: Theme.of(context)
                                     .textTheme
                                     .headlineLarge
@@ -91,7 +91,8 @@ class _MyHomePageState extends State<HomeScreen> {
                                 onPressed: () {
                                   checkSale();
                                 },
-                                child: Text("Check"),
+                                child: Text("Check").paddingLTRB(
+                                    left: 30, top: 0, right: 30, bottom: 0),
                               ).paddingLTRB(
                                   left: 20.0,
                                   top: 385.0,
