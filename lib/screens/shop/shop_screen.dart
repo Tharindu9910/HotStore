@@ -63,22 +63,24 @@ class _ShopPageState extends State<ShopScreen> {
                     ),
                   ],
                 )),
-            Flexible(
+            const Flexible(
                     flex: 1,
                     child: Text("Choose category",
                         style: TextStyle(color: Colors.black45)))
                 .paddingOnly(left: 10),
             Flexible(
-              flex: 4,
-              child: ListView.builder(
-                  itemCount: categories.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      title: Text(categories[index],
-                          style: TextStyle(fontSize: 20)),
-                    );
-                  }).paddingOnly(left: 20, top: 10),
-            ),
+                flex: 4,
+                child: ListView.separated(
+                    itemCount: categories.length,
+                    separatorBuilder: (BuildContext context, int index) =>
+                        Divider(),
+                    itemBuilder: (BuildContext context, int index) {
+                      return ListTile(
+                        title: Text(categories[index],
+                                style: TextStyle(fontSize: 20))
+                            .paddingOnly(left: 20, top: 10),
+                      );
+                    })),
           ],
         ));
   }
