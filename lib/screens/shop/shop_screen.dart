@@ -38,10 +38,7 @@ class _ShopPageState extends State<ShopScreen> {
           centerTitle: true,
           leading: GestureDetector(
             child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.arrow_back_ios_new)),
+                onPressed: () {}, icon: Icon(Icons.arrow_back_ios_new)),
           ),
           actions: [
             IconButton(

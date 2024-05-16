@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:hot_store1/common_widgets/network_image.dart';
 import 'package:hot_store1/screens/home/view_product_screen.dart';
@@ -100,13 +101,32 @@ class _MyHomePageState extends State<HomeScreen> {
                                   bottom: 0.0),
                             ],
                           ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "New",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineLarge
+                                    ?.copyWith(fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                "View all",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineLarge
+                                    ?.copyWith(fontSize: 15),
+                              ),
+                            ],
+                          ).paddingOnly(left: 20, right: 20, top: 20),
                           Text(
-                            "New",
+                            "You've never seen it before!",
                             style: Theme.of(context)
                                 .textTheme
-                                .headlineLarge
-                                ?.copyWith(fontWeight: FontWeight.w600),
-                          ).paddingStart(15),
+                                .bodyLarge
+                                ?.copyWith(color: Colors.black45),
+                          ).paddingStart(20),
                           SizedBox(
                               height: MediaQuery.of(context).size.height * 0.4,
                               child: ListView.builder(
@@ -132,7 +152,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                           AppNetworkImage(
                                             imageUrl: item.image!,
                                             height: deviceSize.height * 0.2,
-                                            // width: deviceSize.width * 0.27,
+                                            width: deviceSize.width * 0.30,
                                           ),
                                           Row(
                                             children: [
@@ -189,7 +209,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                     )
                                         .paddingSymmetric(horizontal: 10)
                                         .paddingTop(10);
-                                  })),
+                                  })).paddingAll(10),
                         ],
                       )
               ],
